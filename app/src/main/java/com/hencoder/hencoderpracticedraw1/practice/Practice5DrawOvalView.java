@@ -2,6 +2,10 @@ package com.hencoder.hencoderpracticedraw1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -25,5 +29,19 @@ public class Practice5DrawOvalView extends View {
         super.onDraw(canvas);
 
 //        练习内容：使用 canvas.drawOval() 方法画椭圆
+
+        float width = getWidth();
+        float height = getHeight();
+
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.BLACK);
+
+        RectF rectf = new RectF();
+        rectf.left = (int) (width / 4);
+        rectf.top = (int) (height / 4);
+        rectf.right = (int) (rectf.left + width / 4);
+        rectf.bottom = (int) (rectf.top + height / 4);
+        canvas.drawOval(rectf, paint);
     }
 }
