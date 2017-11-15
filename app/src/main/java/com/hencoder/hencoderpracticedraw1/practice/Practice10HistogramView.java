@@ -10,6 +10,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice10HistogramView extends View {
+    float[] rates = new float[]{0.2f, 0.1f, 0.5f, 0.3f, 0.7f, 0.4f, 1f}; //直方图数据
+    String[] titles = new String[]{"Froyo", "GB", "ICS", "JB", "KitKat", "L", "M"};
 
     public Practice10HistogramView(Context context) {
         super(context);
@@ -29,9 +31,6 @@ public class Practice10HistogramView extends View {
 
 //        综合练习
 //        练习内容：使用各种 Canvas.drawXXX() 方法画直方图
-
-        float[] rates = new float[]{0.2f, 0.1f, 0.5f, 0.3f, 0.7f, 0.4f, 1f}; //直方图数据
-        String[] titles = new String[]{"Froyo", "GB", "ICS", "JB", "KitKat", "L", "M"};
 
         int lengthX = getWidth() - 30 * 2;
         int lengthY = getHeight() - 30 * 2;
